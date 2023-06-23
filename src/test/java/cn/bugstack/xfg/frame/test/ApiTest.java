@@ -1,6 +1,6 @@
 package cn.bugstack.xfg.frame.test;
 
-import cn.bugstack.xfg.frame.domain.vo.UserInfo;
+import cn.bugstack.xfg.frame.domain.vo.UserVO;
 import cn.bugstack.xfg.frame.service.IUserService;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
@@ -22,8 +22,8 @@ public class ApiTest {
 
     @Test
     public void test_queryUserList() {
-        List<UserInfo> userInfoList = userService.queryUserList();
-        log.info("测试结果：{}", JSON.toJSONString(userInfoList));
+        List<UserVO> userVOList = userService.queryUserList();
+        log.info("测试结果：{}", JSON.toJSONString(userVOList));
     }
 
 }

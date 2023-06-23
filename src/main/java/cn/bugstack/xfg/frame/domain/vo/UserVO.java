@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserInfo {
+public class UserVO {
 
     /** 用户名称 */
     private String userId;

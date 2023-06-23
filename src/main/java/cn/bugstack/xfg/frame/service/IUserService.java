@@ -1,14 +1,13 @@
 package cn.bugstack.xfg.frame.service;
 
-import cn.bugstack.xfg.frame.domain.req.UserReq;
-import cn.bugstack.xfg.frame.domain.vo.UserInfo;
+import cn.bugstack.xfg.frame.domain.vo.UserVO;
 
 import java.util.List;
 
 public interface IUserService {
 
-    List<UserInfo> queryUserList();
+    List<UserVO> queryUserList();
 
-    UserInfo queryUserInfo(String uId);
+    UserVO queryUserInfo(String uId);
 
 }

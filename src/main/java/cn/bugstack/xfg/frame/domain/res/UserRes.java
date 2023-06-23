@@ -1,7 +1,7 @@
 package cn.bugstack.xfg.frame.domain.res;
 
 import cn.bugstack.xfg.frame.common.Result;
-import cn.bugstack.xfg.frame.domain.vo.UserInfo;
+import cn.bugstack.xfg.frame.domain.vo.UserVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +16,6 @@ import java.util.List;
 public class UserRes {
 
     private Result result;
-    private List<UserInfo> userInfos;
+    private List<UserVO> userVOList;
 
 }

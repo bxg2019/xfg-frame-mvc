@@ -2,7 +2,7 @@ package cn.bugstack.xfg.frame.service.impl;
 
 import cn.bugstack.xfg.frame.dao.IUserDao;
 import cn.bugstack.xfg.frame.domain.po.User;
-import cn.bugstack.xfg.frame.domain.vo.UserInfo;
+import cn.bugstack.xfg.frame.domain.vo.UserVO;
 import cn.bugstack.xfg.frame.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,11 +19,11 @@ public class UserServiceImpl implements IUserService {
     private IUserDao userDao;
 
     @Override
-    public List<UserInfo> queryUserList() {
-        List<UserInfo> userInfoList = new ArrayList<>();
+    public List<UserVO> queryUserList() {
+        List<UserVO> userInfoList = new ArrayList<>();
         List<User> users = userDao.queryUserList();
         for (User user : users) {
-            UserInfo userInfo = UserInfo.builder()
+            UserVO userInfo = UserVO.builder()
                     .userId(user.getUserId())
                     .userNickname(user.getUserNickname())
                     .createTime(user.getCreateTime())
@@ -34,9 +34,9 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public UserInfo queryUserInfo(String uId) {
+    public UserVO queryUserInfo(String uId) {
         log.info("查询用户信息：{}", uId);
-        return new UserInfo();
+        return new UserVO();
     }
 
 }
